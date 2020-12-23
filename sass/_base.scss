@@ -42,8 +42,8 @@ html {
 
 body {
     font-family: $font-primary;
-    color: $color-grey-dark;
-    font-weight: 300;
+    color: $color-black;
+    font-weight: 400;
     line-height: 1.6;
 }
 
@@ -69,11 +69,6 @@ body {
     // @media only screen and (max-width: $bp-small) {
     //     grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
     //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-    // }
-
-    // & > * {
-    //     grid-column: 1 / -1;
-    //     font-size: 15rem;
     // }
 }
 

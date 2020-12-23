@@ -1,0 +1,41 @@
+.hero {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    // grid-gap: 10rem;
+    grid-template-columns: repeat(8, 1fr);
+    
+
+    &__body-text {
+        font-size: 2rem;
+    }
+
+    &__btn {
+        padding: 2rem 5rem;
+        font-size: 1.4rem;
+    }
+}
+
+.welcome__textbox {
+    grid-column: 1 / 5;
+}
+
+.welcome__video {
+    grid-column: 5/9;
+    margin-left: auto;
+    margin-bottom: 10rem;
+}
+
+.better-way__textbox {
+    grid-column: 6/9;
+}
+
+.better-way__video {
+    grid-column: 1 / 6;
+    grid-row: 2 / 3;
+    // margin-left: auto;
+}
+
+.better-way__heading {
+    font-size: 5rem;
+}

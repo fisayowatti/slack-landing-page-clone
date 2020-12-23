@@ -5,7 +5,22 @@
 
 .heading-1 {
     @extend %heading;
-    font-size: 4.5rem;
-    color: #fff;
-    line-height: 1
+
+    font-size: 6.4rem;
+    font-weight: 700;
+    color: $color-black;
+    line-height: 1;
+}
+
+.mb-sm {
+    margin-bottom: 2rem;
+}
+.mb-md {
+    margin-bottom: 3rem;
+}
+.mb-lg {
+    margin-bottom: 4rem;
+}
+.mb-hg {
+    margin-bottom: 8rem;
 }

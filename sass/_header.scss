@@ -1,6 +1,7 @@
 .header {
     font-family: $font-primary;
     margin-top: 2rem;
+    margin-bottom: 6.4rem;
     grid-column: center-start / center-end;
 
     display: flex;
@@ -22,7 +23,7 @@
     }
 
     &__item {
-        margin-left: 2rem;
+        margin-left: 2.4rem;
     }
 
     &__item--main {

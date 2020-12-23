@@ -11,8 +11,8 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: #7a7979;
-  font-weight: 300;
+  color: #030303;
+  font-weight: 400;
   line-height: 1.6; }
 
 .container {
@@ -39,13 +39,27 @@ body {
   font-weight: 700; }
 
 .heading-1 {
-  font-size: 4.5rem;
-  color: #fff;
+  font-size: 6.4rem;
+  font-weight: 700;
+  color: #030303;
   line-height: 1; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
 
 .header {
   font-family: "Montserrat", sans-serif;
   margin-top: 2rem;
+  margin-bottom: 6.4rem;
   grid-column: center-start / center-end;
   display: flex; }
   .header__logo {
@@ -58,7 +72,7 @@ body {
     .header__menu--right {
       margin-left: auto; }
   .header__item {
-    margin-left: 2rem; }
+    margin-left: 2.4rem; }
   .header__item--main {
     font-size: 1.4rem;
     font-weight: 700;
@@ -66,3 +80,31 @@ body {
   .header__btn {
     padding: 1.2rem 2rem;
     font-size: 1.4rem; }
+
+.hero {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); }
+  .hero__body-text {
+    font-size: 2rem; }
+  .hero__btn {
+    padding: 2rem 5rem;
+    font-size: 1.4rem; }
+
+.welcome__textbox {
+  grid-column: 1 / 5; }
+
+.welcome__video {
+  grid-column: 5/9;
+  margin-left: auto;
+  margin-bottom: 10rem; }
+
+.better-way__textbox {
+  grid-column: 6/9; }
+
+.better-way__video {
+  grid-column: 1 / 6;
+  grid-row: 2 / 3; }
+
+.better-way__heading {
+  font-size: 5rem; }
