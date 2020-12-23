@@ -8,29 +8,61 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 71.25em) {
-    html {
-      font-size: 50%; } }
 
 body {
-  font-family: "Nunito", sans-serif;
-  color: #6D5D4B;
+  font-family: "Montserrat", sans-serif;
+  color: #7a7979;
   font-weight: 300;
   line-height: 1.6; }
 
 .container {
+  background-image: linear-gradient(to bottom, #F6EFE8 50%, #fff 50%);
+  background-repeat: no-repeat;
   display: grid;
-  grid-template-rows: 80vh min-content minmax(min-content, 40vw) repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  @media only screen and (max-width: 56.25em) {
-    .container {
-      grid-template-rows: 6rem 80vh min-content minmax(min-content, 40vw) repeat(3, min-content);
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
-  @media only screen and (max-width: 50em) {
-    .container {
-      grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
-  @media only screen and (max-width: 37.5em) {
-    .container {
-      grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
+  grid-template-rows: repeat(6, min-content);
+  grid-template-columns: 1fr [center-start] repeat(6, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] 1fr; }
+
+.btn {
+  text-transform: uppercase;
+  border-radius: .5rem; }
+  .btn--primary {
+    color: #fff;
+    background-color: #612069;
+    border: none; }
+  .btn--secondary {
+    background: none;
+    color: #612069;
+    border: 1px solid currentColor; }
+
+.heading-1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #fff;
+  line-height: 1; }
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  grid-column: center-start / center-end;
+  display: flex; }
+  .header__logo {
+    width: 12rem; }
+  .header__menu {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center; }
+    .header__menu--right {
+      margin-left: auto; }
+  .header__item {
+    margin-left: 2rem; }
+  .header__item--main {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #030303; }
+  .header__btn {
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem; }

@@ -1,18 +1,21 @@
 // COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #B28451;
+$color-white: #fff;
+$color-black: #030303;
+$color-beige: #F6EFE8;
 
-$color-secondary: #101d2c;
+$color-blue-dark: #1165a3;
+$color-blue-light: #6baefd;
 
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
+$color-grey-light: #bdbcbc;
+$color-grey-dark: #7a7979;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
+$color-purple: #612069;
+$color-yellow: #f0bc36;
+$color-red: #e21e5b;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+$font-primary: 'Montserrat', sans-serif;
+$font-display: 'Manrope', sans-serif;
 
 //RESPONSIVE BREAKPOINTS
 $bp-largest: 71.25em; //1200px
@@ -32,35 +35,61 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 
-    @media only screen and (max-width: $bp-largest) {
-        font-size: 50%; // makes 1 rem = 8px instead of 10px
-    }
+    // @media only screen and (max-width: $bp-largest) {
+    //     font-size: 50%; // makes 1 rem = 8px instead of 10px
+    // }
 }
 
 body {
     font-family: $font-primary;
-    color: $color-grey-dark-2;
+    color: $color-grey-dark;
     font-weight: 300;
     line-height: 1.6;
 }
 
 .container {
+    background-image: linear-gradient(to bottom, $color-beige 50%, $color-white 50%);
+    background-repeat: no-repeat;
     display: grid;
-    grid-template-rows: 80vh min-content minmax(min-content, 40vw) repeat(3, min-content);
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // grid-template-rows: 80vh min-content minmax(min-content, 40vw) repeat(3, min-content);
+    grid-template-rows: repeat(6, min-content) ;
+    // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-columns: 1fr [center-start] repeat(6, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] 1fr;
 
-    @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 6rem 80vh min-content minmax(min-content, 40vw) repeat(3, min-content);
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // @media only screen and (max-width: $bp-large) {
+    //     grid-template-rows: 6rem 80vh min-content minmax(min-content, 40vw) repeat(3, min-content);
+    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // }
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
+    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // }
+
+    // @media only screen and (max-width: $bp-small) {
+    //     grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
+    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // }
+
+    // & > * {
+    //     grid-column: 1 / -1;
+    //     font-size: 15rem;
+    // }
+}
+
+.btn {
+    text-transform: uppercase;
+    border-radius: .5rem;
+
+    &--primary {
+        color: $color-white;
+        background-color: $color-purple;
+        border: none;
     }
 
-    @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-    }
-
-    @media only screen and (max-width: $bp-small) {
-        grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    &--secondary {
+        background: none;
+        color: $color-purple;
+        border: 1px solid currentColor;
     }
 }

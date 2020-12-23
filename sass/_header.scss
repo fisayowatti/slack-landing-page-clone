@@ -1,0 +1,42 @@
+.header {
+    font-family: $font-primary;
+    margin-top: 2rem;
+    grid-column: center-start / center-end;
+
+    display: flex;
+
+    &__logo {
+        width: 12rem;
+    }
+
+    &__menu{
+        text-decoration: none;
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+
+        &--right {
+            margin-left: auto;
+        }
+    }
+
+    &__item {
+        margin-left: 2rem;
+    }
+
+    &__item--main {
+        
+        font-size: 1.4rem;
+        font-weight: 700;
+
+        color: $color-black;
+    }
+
+    &__btn {
+        padding: 1.2rem 2rem;
+        font-size: 1.4rem;
+    }
+
+
+}
