@@ -105,14 +105,16 @@ body {
 .welcome__video {
   grid-column: 5/9;
   margin-left: auto;
-  margin-bottom: 10rem; }
+  margin-bottom: 10rem;
+  width: 50rem; }
 
 .better-way__textbox {
   grid-column: 6/9; }
 
 .better-way__video {
   grid-column: 1 / 6;
-  grid-row: 2 / 3; }
+  grid-row: 2 / 3;
+  width: 70rem; }
 
 .story {
   grid-column: center-start / center-end;
@@ -167,5 +169,27 @@ body {
     flex-wrap: wrap;
     margin-top: 8rem; }
     .story__brands > img {
-      height: 30%;
+      height: 20%;
       margin-top: 2rem; }
+
+.cta-spread {
+  grid-column: 1 / -1;
+  padding: 10rem;
+  clip-path: ellipse(75% 100% at center top);
+  background-color: #3d1442;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .cta-spread__heading {
+    color: #fff;
+    margin-bottom: 4rem; }
+  .cta-spread__btn {
+    padding: 2rem 5rem;
+    font-size: 1.4rem; }
+    .cta-spread__btn--primary {
+      background-color: #fff;
+      color: #612069;
+      margin-right: 1rem; }
+    .cta-spread__btn--secondary {
+      color: #fff;
+      border: 1px solid currentColor; }

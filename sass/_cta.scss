@@ -1,0 +1,33 @@
+.cta-spread{
+    grid-column: 1 / -1;
+
+    padding: 10rem;
+    clip-path: ellipse(75% 100% at center top);
+
+    background-color: darken($color-purple, 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        color: $color-white;
+        margin-bottom: 4rem;
+    }
+
+    &__btn {
+        padding: 2rem 5rem;
+        font-size: 1.4rem;
+        
+
+        &--primary {
+            background-color: $color-white;
+            color: $color-purple;
+            margin-right: 1rem;
+        }
+
+        &--secondary {
+            color: $color-white;
+            border: 1px solid currentColor;
+        }
+    }
+}
