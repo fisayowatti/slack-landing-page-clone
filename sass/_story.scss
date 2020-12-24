@@ -1,0 +1,88 @@
+.story {
+    grid-column: center-start / center-end;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        width: 80%;
+        text-align: center;
+        line-height: 6rem;
+        margin-bottom: 2rem;
+    }
+    
+    &__link {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: $color-blue-dark;
+        margin-bottom: 8rem;
+        
+        &::before {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: currentColor;
+            width: 0rem;
+            transform: translateY(3rem);
+            transition: all 0.35s;
+        }
+        
+        &::after {
+            content: "\2192";
+            margin-left: 1rem;
+        }
+        
+        &:hover {
+            &::before {
+                width: 24rem;
+            }
+        }
+        
+    }
+
+
+    &__details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10rem;
+
+        align-items: center;
+
+        width: 110%;
+    }
+
+    &__text {
+        &--body {
+            font-weight: 300;
+            font-style: italic;
+            font-size: 2.8rem;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        &--name {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+    }
+
+    &__picture {
+        margin-left: auto;
+    }
+
+    &__brands {
+        width: 110%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 8rem;
+        
+        & > img {
+            height: 30%;
+            margin-top: 2rem;
+        }
+    }
+}

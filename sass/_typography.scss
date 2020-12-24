@@ -12,6 +12,15 @@
     line-height: 1;
 }
 
+.heading-2 {
+    @extend %heading;
+
+    font-size: 5rem;
+    font-weight: 700;
+    color: $color-black;
+    line-height: 1;
+}
+
 .mb-sm {
     margin-bottom: 2rem;
 }
