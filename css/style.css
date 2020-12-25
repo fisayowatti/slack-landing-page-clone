@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 83.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -122,6 +125,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 83.75em) {
+    .story {
+      grid-column: 1 / -1; } }
   .story__heading {
     width: 80%;
     text-align: center;
@@ -147,10 +153,17 @@ body {
       width: 24rem; }
   .story__details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr min-content;
     grid-gap: 10rem;
     align-items: center;
     width: 110%; }
+    @media only screen and (max-width: 83.75em) {
+      .story__details {
+        width: 100%;
+        grid-gap: 4rem; } }
+  @media only screen and (max-width: 83.75em) {
+    .story__text {
+      margin-left: 4rem; } }
   .story__text--body {
     font-weight: 300;
     font-style: italic;
@@ -162,16 +175,24 @@ body {
     font-size: 1.8rem; }
   .story__picture {
     margin-left: auto; }
+    @media only screen and (max-width: 83.75em) {
+      .story__picture {
+        width: 50vw; } }
   .story__brands {
     width: 110%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 8rem; }
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 83.75em) {
+      .story__brands {
+        width: 90%; } }
     .story__brands > img {
-      height: 20%;
+      height: 15%;
       margin-top: 2rem; }
+      @media only screen and (max-width: 83.75em) {
+        .story__brands > img {
+          height: 10%; } }
 
 .cta-spread {
   grid-column: 1 / -1;
