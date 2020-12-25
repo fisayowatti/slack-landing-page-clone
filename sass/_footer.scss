@@ -1,0 +1,136 @@
+.footer-1 {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.footer-2 {
+    grid-column: center-start / center-end;
+
+    border-top: 1px solid $color-grey-light;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+
+.footer {
+
+    &__logo {
+        width: 12rem;
+    }
+
+    &__list {
+        //this hide the checkbox that's used 
+        //to track the :checked state behind everything else
+        & > input[type="checkbox"] {
+            visibility: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: 600px) {
+            display: grid;
+            grid-template-columns: 1fr min-content;
+            align-items: center;
+        
+            &::after {
+            content: "\276F";
+            display: block;
+            margin-right: 10px;
+            transition: all 0.1s;
+            
+            input:checked ~ label > & {
+                transform: rotate(90deg);
+            }
+            }
+        }
+    }
+
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        color: $color-black;
+    
+        @media only screen and (max-width: 600px) {
+            display: none;
+            
+            input:checked ~ label > & {
+                display: inline-block;
+                border: .5px dashed black;
+                width: 198px;
+            }
+        }
+
+        & > li {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-grey-dark;
+        font-size: 1.4rem;
+    }
+
+    &__base {
+        display: flex;
+        margin-bottom: 2rem;
+
+        &--left {
+            display: flex;
+            align-items: center;
+
+            & > li {
+                margin-right: 2rem;
+                
+                & > a {
+                    font-weight: 700;
+                    color: $color-black;
+                }
+            }
+        }
+
+        &--right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+            & > a {
+                font-size: 1.4rem;
+                color: $color-blue-dark;
+            }
+
+            & > ul > li {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    &__social-tags {
+        display: flex;
+        align-items: center;
+    }
+
+    &__social-tags > li {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        background-color: $color-grey-dark;
+    }
+
+    &__copyright {
+        font-size: 1.2rem;
+    }
+}

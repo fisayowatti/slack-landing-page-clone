@@ -49,7 +49,7 @@ body {
 }
 
 .container {
-    background-image: linear-gradient(to bottom, $color-beige 50%, $color-white 50%);
+    background-image: linear-gradient(to bottom, $color-beige 31%, $color-white 31%);
     background-repeat: no-repeat;
     display: grid;
     // grid-template-rows: 80vh min-content minmax(min-content, 40vw) repeat(3, min-content);
@@ -77,6 +77,7 @@ body {
 .btn {
     text-transform: uppercase;
     border-radius: .5rem;
+    font-weight: 700;
 
     &--primary {
         color: $color-white;
